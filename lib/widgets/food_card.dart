@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:random_restaurant/food_data.dart';
 import 'map_preview.dart';
 import 'package:flutter_naver_map/flutter_naver_map.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FoodCard extends StatelessWidget {
   final Food food;
@@ -36,9 +37,9 @@ class FoodCard extends StatelessWidget {
           // 음식 이름
           Text(
             food.name,
-            style: const TextStyle(
-              fontSize: 34,
-              fontWeight: FontWeight.w900,
+            style: GoogleFonts.jua(
+              fontSize: 38,
+              fontWeight: FontWeight.w500,
             ),
           ),
 

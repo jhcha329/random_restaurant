@@ -12,16 +12,21 @@ class SecondaryActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const accent = Color(0xFFFF6B2C);
+
     return SizedBox(
-      width: 280,
+      width: double.infinity,
       height: 56,
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
-          foregroundColor: Colors.black87,
-          side: const BorderSide(color: Colors.black26),
+          foregroundColor: accent,
+          side: BorderSide(
+            color: accent.withOpacity(0.5),
+            width: 1.5,
+          ),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(18),
           ),
         ),
         child: Text(
@@ -29,6 +34,7 @@ class SecondaryActionButton extends StatelessWidget {
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w700,
+            letterSpacing: -0.2,
           ),
         ),
       ),

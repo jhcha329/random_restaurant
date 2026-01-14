@@ -2,6 +2,7 @@ import 'dart:math';
 import 'food_data.dart';
 import 'package:flutter/material.dart';
 import 'widgets/food_card.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RandomScreen extends StatefulWidget {
   const RandomScreen({super.key});
@@ -50,11 +51,12 @@ class _RandomScreenState extends State<RandomScreen> {
                 const SizedBox(height: 16),
 
                 // 헤더
-                const Text(
-                  '밥묵자!',
-                  style: TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.w800,
+                Text(
+                  'HeyBob',
+                  style: GoogleFonts.jua(
+                    fontSize: 35,
+                    color: const Color(0xFFFF6B2C),
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 const SizedBox(height: 16),
