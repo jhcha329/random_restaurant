@@ -1,16 +1,18 @@
-# random_restaurant
+# Random Restaurant 🍽️
 
-A new Flutter project.
+Flutter 앱으로 랜덤 음식 추천과 네이버 지도 미리보기를 제공합니다.
 
-## Getting Started
+## Features
+- 랜덤 음식 추천
+- 음식 설명 및 추천 브랜드 표시
+- 네이버 지도 연동
 
-This project is a starting point for a Flutter application.
+## Environment Variables
+Create a `.env` file in the project root:
 
-A few resources to get you started if this is your first Flutter project:
+NAVER_MAP_CLIENT_ID=your_naver_map_client_id
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+- Flutter
+- flutter_naver_map
+- flutter_dotenv
