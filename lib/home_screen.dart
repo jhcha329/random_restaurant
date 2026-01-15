@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
 
                 /// 메인 타이틀 영역
                 Text(
-                  'HeyBob',
+                  'HEYBOB',
                   style: GoogleFonts.jua(
                     fontSize: 45,
                     fontWeight: FontWeight.bold,
@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
 
                 Center(
                   child: const Text(
-                    '고민은 내가 할게 너는 골라!',
+                    '메뉴고민 해결해줄게!',
                     style: TextStyle(
                       fontSize: 16,
                       height: 1.4,

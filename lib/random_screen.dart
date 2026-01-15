@@ -3,6 +3,7 @@ import 'food_data.dart';
 import 'package:flutter/material.dart';
 import 'widgets/food_card.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'search_screen.dart';
 
 class RandomScreen extends StatefulWidget {
   const RandomScreen({super.key});
@@ -52,7 +53,7 @@ class _RandomScreenState extends State<RandomScreen> {
 
                 // 헤더
                 Text(
-                  'HeyBob',
+                  'HEYBOB',
                   style: GoogleFonts.jua(
                     fontSize: 35,
                     color: const Color(0xFFFF6B2C),
@@ -88,7 +89,17 @@ class _RandomScreenState extends State<RandomScreen> {
                     ),
                   ),
                 ),
-
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => SearchScreen(keyword: food.name),
+                      ),
+                    );
+                  },
+                  child: const Text('주변 음식점 찾기'),
+                ),
                 const SizedBox(height: 16),
 
                 // CTA 버튼
