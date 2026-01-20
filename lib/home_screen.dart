@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'random_screen.dart';
+import 'random/presentation/random_screen.dart';
 import 'widgets/primary_action_button.dart';
 import 'widgets/secondary_action_button.dart';
 import 'widgets/floating_image.dart';

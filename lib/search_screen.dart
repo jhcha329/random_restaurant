@@ -3,6 +3,8 @@ import 'package:dio/dio.dart';
 
 import 'models/place.dart';
 import 'services/place_search_service.dart';
+import 'place_map_screen.dart';
+import 'widgets/bottom_actions.dart';
 
 class SearchScreen extends StatefulWidget {
   final String keyword;
@@ -73,18 +75,49 @@ class SearchScreenState extends State<SearchScreen> {
           }
 
           // 4️⃣ 성공 → 리스트
-          return ListView.separated(
-            itemCount: places.length,
-            separatorBuilder: (_, __) => const Divider(height: 1),
-            itemBuilder: (context, index) {
-              final place = places[index];
-
-              return ListTile(
-                title: Text(place.name),
-                subtitle: Text(place.address),
-                leading: const Icon(Icons.place_outlined),
-              );
-            },
+          // 4️⃣ 성공 → 리스트 + 지도 버튼
+          return Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(12),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => PlaceMapScreen(
+                            keyword: widget.keyword,
+                            places: places,
+                          ),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.map_outlined),
+                    label: const Text('지도로 보기'),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: ListView.separated(
+                  itemCount: places.length,
+                  separatorBuilder: (_, __) => const Divider(height: 1),
+                  itemBuilder: (context, index) {
+                    final place = places[index];
+                    return ListTile(
+                      title: Text(place.name),
+                      subtitle: Text(
+                        place.roadAddress.isNotEmpty
+                            ? place.roadAddress
+                            : place.address,
+                      ),
+                      leading: const Icon(Icons.place_outlined),
+                    );
+                  },
+                ),
+              ),
+            ],
           );
         },
       ),

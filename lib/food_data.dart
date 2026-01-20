@@ -105,7 +105,7 @@ const List<Food> foodList = [
     brands: ['포메인', '에머이', '미분당'],
   ),
   Food(
-    name: '카레',
+    name: '냉면',
     description: '향신료의 깊은 맛이 매력적인 든든한 한 끼',
     brands: ['아비꼬', '코코이찌방야', '카레마루'],
   ),

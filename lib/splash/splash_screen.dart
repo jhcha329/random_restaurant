@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
               const SizedBox(height: 16),
 
               Text(
-                '밥묵자!',
+                'HEYBOB',
                 style: GoogleFonts.jua(
                   fontSize: 40,
                   color: accent,
